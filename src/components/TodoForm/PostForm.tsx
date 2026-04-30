@@ -56,7 +56,6 @@ export const PostForm: React.FC<Props> = ({ onSubmit }) => {
           data-cy="titleInput"
           value={title}
           onChange={handleTitleChange}
-          onBlur={() => setTitleError(!title)}
         />
         {titleError && <span className="error">Please enter a title</span>}
       </div>
@@ -68,7 +67,6 @@ export const PostForm: React.FC<Props> = ({ onSubmit }) => {
           data-cy="userSelect"
           value={userId}
           onChange={handleUserChange}
-          onBlur={() => setUserPostError(!userId)}
         >
           <option value="0" disabled>
             Choose a user
